@@ -8,5 +8,6 @@ gem 'puma'
 gem 'pry-rails', group: %i(development test)
 
 group :development do
+  gem 'rubocop', require: false
   gem 'spring'
 end
