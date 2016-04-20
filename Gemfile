@@ -9,10 +9,21 @@ gem 'puma'
 gem 'grape'
 gem 'hashie-forbidden_attributes'
 
-gem 'pry-rails', group: %i(development test)
+# group :test do
+#   gem 'factory_girl_rails'
+#   gem 'database_cleaner'
+#   gem 'capybara'
+# end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+  gem 'pry-rails'
+end
 
 group :development do
   gem 'rubocop', require: false
+  gem 'rubocop-rspec', require: false
   gem 'spring'
+  gem 'spring-commands-rspec'
   gem 'listen', '~> 3.0.5'
 end
